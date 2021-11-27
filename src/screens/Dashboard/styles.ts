@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { Platform } from "react-native";
+import { ActivityIndicator, Platform } from "react-native";
 import { FlatList } from "react-native";
 
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
@@ -103,3 +103,10 @@ export const TransactionList = styled(
     paddingBottom: getBottomSpace(),
   },
 })``;
+
+
+export const LoadContainer=styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`;

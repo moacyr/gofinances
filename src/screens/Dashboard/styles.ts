@@ -7,6 +7,7 @@ import { Feather } from "@expo/vector-icons";
 import {
   getBottomSpace,
   getStatusBarHeight,
+  isIphoneX,
 } from "react-native-iphone-x-helper";
 import { BorderlessButton } from "react-native-gesture-handler";
 
@@ -26,9 +27,7 @@ export const Header = styled.View`
 export const UserWrapper = styled.View`
   width: 100%;
   padding: 0px 24px;
-  margin-top: ${Platform.OS === "ios"
-    ? getStatusBarHeight()
-    : 0 + RFValue(28)}px;
+  margin-top: ${ getStatusBarHeight()+RFValue(28)}px;
 
   flex-direction: row;
   justify-content: space-between;
